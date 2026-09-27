@@ -8,7 +8,10 @@
 // step2> reverse  both  array, YOU WILL GET   (3 ,5 , 4 ,1) (7 , 6) 
 // step3> reveerse  hte  complete  array 
 // you will get  (6, 7 ,1 ,4, 5 ,3)
-but what  if  
+// but what  if  the k >n so the  code  give  grabage  value for over  this  problem
+// understant this if  we  rotate  the  array n time = size of the  array 
+// so we  get  the  same  array  so we need  to skip the  exactly k/n step 
+// and  remail all to perforn on the  same  algorithm 
 
 #include <iostream>
 #include <vector>
@@ -47,11 +50,16 @@ int main()
     int n = v.size();
    
 // by  default k(rotation time)
-int k =2;         
-    display(v, n);
-    cout << endl;
-    PartReverse(0, n - 1 - k, v);
-    PartReverse(n - k, n - 1, v);
-    PartReverse(0, n - 1, v);
-    display(v , n);
+cout<<"enter the  no. of  time  you  want  to rotate  the  array:  ";
+int k;
+cin>>k;
+if(k>n){                           // for  solving  the  problem of k>n
+    k=k%n;
+}
+display(v, n);
+cout << endl;
+PartReverse(0, n - 1 - k, v);
+PartReverse(n - k, n - 1, v);
+PartReverse(0, n - 1, v);
+display(v, n);
 }
