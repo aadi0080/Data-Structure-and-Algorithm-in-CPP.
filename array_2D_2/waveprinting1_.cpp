@@ -20,35 +20,7 @@ int  main(){
         }
       
     }
-//  LONG METHOD
-    // just  reverse  alternative  row 
-//     for(int i =0 ; i < m ; i++){
-//         for(int j = 0 ; j < n ; j++){
-//             if(i%2!=0){
-//                 int p1 = 0 ;
-//                 int p2 = n-1 ;
-//                 while(p1<=p2){
-//                     int temp = arr[i][p1] ;
-//                     arr[i][p1] = arr[i][p2] ; 
-//                     arr[i][p2] = temp ; 
-//                     p1++ ; 
-//                     p2-- ; 
-//                 }
-//             }
-//         }
-//     }
 
-//     cout<<endl ; 
-// // spiral printing of matrix 
-// for(int i =0 ; i<m ; i++){
-//         for(int j = 0 ; j< n ; j++){
-//             cout<<arr[i][j]<<" ";
-
-//         }
-       
-      
-//     }
-// short method 
 for(int i =0 ; i<m ; i++){
         if(i%2==0){
              for(int j = 0 ; j< n ; j++){
